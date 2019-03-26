@@ -8,22 +8,22 @@ import java.io.Closeable;
  * 并且在发送数据时，实现对数据的基本包装
  */
 public interface SendDispatcher extends Closeable {
-    /**
-     * 发送一份数据
-     *
-     * @param packet 数据
-     */
-    void send(SendPacket packet);
+  /**
+   * 发送一份数据
+   *
+   * @param packet 数据
+   */
+  void send(SendPacket packet);
 
-    /**
-     * 发送心跳包
-     */
-    void sendHeartbeat();
+  /**
+   * 发送心跳包
+   */
+  void sendHeartbeat();
 
-    /**
-     * 取消发送数据
-     *
-     * @param packet 数据
-     */
-    void cancel(SendPacket packet);
+  /**
+   * 取消发送数据
+   *
+   * @param packet 数据
+   */
+  void cancel(SendPacket packet);
 }

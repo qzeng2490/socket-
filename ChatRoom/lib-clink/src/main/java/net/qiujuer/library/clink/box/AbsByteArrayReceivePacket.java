@@ -11,17 +11,17 @@ import java.io.ByteArrayOutputStream;
  */
 public abstract class AbsByteArrayReceivePacket<Entity> extends ReceivePacket<ByteArrayOutputStream, Entity> {
 
-    public AbsByteArrayReceivePacket(long len) {
-        super(len);
-    }
+  public AbsByteArrayReceivePacket(long len) {
+    super(len);
+  }
 
-    /**
-     * 创建流操作直接返回一个{@link ByteArrayOutputStream}流
-     *
-     * @return {@link ByteArrayOutputStream}
-     */
-    @Override
-    protected final ByteArrayOutputStream createStream() {
-        return new ByteArrayOutputStream((int) length);
-    }
+  /**
+   * 创建流操作直接返回一个{@link ByteArrayOutputStream}流
+   *
+   * @return {@link ByteArrayOutputStream}
+   */
+  @Override
+  protected final ByteArrayOutputStream createStream() {
+    return new ByteArrayOutputStream((int) length);
+  }
 }

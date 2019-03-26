@@ -7,15 +7,15 @@ import java.io.Closeable;
  * 把一份或者多分IoArgs组合成一份Packet
  */
 public interface ReceiveDispatcher extends Closeable {
-    void start();
+  void start();
 
-    void stop();
+  void stop();
 
-    interface ReceivePacketCallback {
-        ReceivePacket<?, ?> onArrivedNewPacket(byte type, long length, byte[] headerInfo);
+  interface ReceivePacketCallback {
+    ReceivePacket<?, ?> onArrivedNewPacket(byte type, long length, byte[] headerInfo);
 
-        void onReceivePacketCompleted(ReceivePacket packet);
+    void onReceivePacketCompleted(ReceivePacket packet);
 
-        void onReceivedHeartbeat();
-    }
+    void onReceivedHeartbeat();
+  }
 }
